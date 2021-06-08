@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+{% endblock head %}
+
+
+{% block title %}
+
+    Welcome To Library
+
+{% endblock title %}  
+
+
+{% block style %}
+
+    .glyphicon-user:before 
+    {
+        content: "\e136";
+    }
+
+    .glyphicon-log-in:before
+    {
+        content:"\e111"
+    }
+
+    .glyphicon-log-out:before
+    {
+        content:"\e111"
+    }
+
+    /* for messages */ 
+    .alert {
+        padding: 15px;
+        margin-bottom: 0px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+
+{% endblock style%}
+
+
+{% block body %}
+
+
+    {% if messages %}
+    {% for message in messages %}
+
+    <div class="alert alert-success">
+
+        <strong>{{ message }}</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+
+    </div>
+
+    {% endfor %}
+    {% endif %}
+
+
+    <div class="container-fluid mt-10">
+
+        <br>
+        <a href="/need/search"> Search Book </a><br>
+        <a href="/need/askIssue"> Issue Book </a><br>
+        <a href="/need/reIssue"> Re-Issue Book </a><br>
+        <a href="/need/Return"> Return Book </a><br>
+
+    </div>
+
+
+{% endblock body %}
