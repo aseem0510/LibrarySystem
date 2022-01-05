@@ -4,7 +4,7 @@ For database I use PostgreSQL and Front-end is done via HTML, CSS & JavaScript.
 
 *********** Important Information ***********
 
-For Safety purposes I remove the setting.py file of this project from repositories, but for your convenience
+For Safety purposes I remove the sensitive data of setting.py file of this project from repositories, but for your convenience
 I added Instrustions below for setting.py file which you have to complete in your setting.py file before running
 the server.
 
@@ -33,7 +33,7 @@ DATABASES = {
         'NAME': Your Database Name (in string),
         'USER': Username of your Database (in string),
         'PASSWORD': Your Password (in string),
-        'HOST': 'localhost'
+        'HOST': Host Name (in string)
     }
 }
 
